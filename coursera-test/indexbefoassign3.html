@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head 
+         content must come *after* these tags -->
+    <title>Ristorante Con Fusion</title>
+      
+      <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!--Including css files for font awesome and bootstrap social -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+
+    <!--link to customize css-->
+    <link href="css/mystyles.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!--adding a simple nav bar - navbar declares it as a navigation bar and the narbar-inverse class to specify that the pg use the dk nav bar. In addt the inner ul
+    is used to specify the items to be put in the nav bar. ul is styled with nav and nav bar classes to specify that the items should be displayed inline the nav bar. -->
+
+        <!--navbar scrolls when webpg in browser is scrolled. want to keep nav bar
+        always visible at the top of pg when pg is scrolled. Need to change below code from navbar-static-top to navbar-fixed-top -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+     <!--creating a responsive nav bar - collapse for xs and replaced by
+             toggle button items can be toggled on or off. -->
+             <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+        <!--going to update code to include logo, replacing text with img            
+                    <a class="navbar-brand" href="#">Ristorante Con Fusion</a> -->
+        <!-- *made sure size would fit into nav bar* -->
+                    <a class="navbar-brand" href="#"><img src="img/logo.png" height=30 width=41></a>
+                </div>
+        <!--To hide the items from the nav bar for smaller screens, need to enclose
+        the ul within another nav bar. By doing this we are specifying that this
+        navbar with id navbar will be collapsed on smaller screens, but toggle
+        on and off. Also note use of data-toggle="collapse" data-target="#navbar"
+        aria-expanded="false" aria ctrl="navbar" within button. This specifies
+        the menu items are collapsed on xs -->
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">
+        <!--adding glyphicon for home icon. By using span class this is how make use
+        of glyphicons in web pg-->
+                    <span class="glyphicon glyphicon-home"
+                         aria-hidden="true"></span> Home</a></li>
+                    <li><a href="aboutus.html"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a></li>
+    <!--Adding dropdown menu to the nav bar - Need to modify the list item for the menu item by replacing it with the code below. In this mod the menu is now replaced
+    with a dropdown-toggle, similar to toggle button -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                         role="button" aria-haspopup="true" aria-expanded="false">
+            <!--add here for menu icon -->
+                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>             
+                         Menu <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Appetizers</a></li>
+                            <li><a href="#">Main Courses</a></li>
+                            <li><a href="#">Desserts</a></li>
+                            <li><a href="#">Drinks</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Specials</li>
+                            <li><a href="#">Lunch Buffet</a></li>
+                            <li><a href="#">Weekend Brunch</a></li>
+                        </ul>
+                     </li>
+                
+              <!--      <li><a href="#">Menu</a></li> -->
+        <!--adding link to a href="#"> for contact also adding icon using font awesome-->      
+                    <li><a href="contactus.html">
+                    <i class= "fa fa-envelope-o"></i> Contact</a></li>
+                </ul>
+        <!-- introducing another link on rt side of navbar using the <ul> with the 
+        nav, navbar-nav and navbar-rt (rt so content in this ul will be pushed to the
+        rt side of navbar) classes in order to trigger the display of the modal ** -->
+                <ul class="nav navbar-nav navbar-right">
+            <!--this <li> is the one used to invoke modal ** remember that
+            used loginModal as ID for modal introduced earlier -->        
+                    <li><a data-toggle="modal" data-target="#loginModal">
+                    <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    </li>
+                </ul>
+
+
+
+
+    <!--adding for class here to have sign-in at rightside of nav bar. -->
+                
+            <!--have to cut and paste for modal, but waiting to make sure 
+            correct before cut 
+                <form class="navbar-form form-inline navbar-right">
+    adding form group 
+                    <div class="form-group">
+                    <label class="sr-only" for="email"> Email Address</label>            
+                    <input type="email" class="form-control" id="email" name="email" 
+                    placeholder="Email">
+                    </div>
+    adding form group 
+                    <div class="form-group">
+                    <label class="sr-only" for="password"> Password</label>                
+                    <input type="password" class="form-control" id="password" name="password"
+                    placeholder="Password">
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="box1">
+                    <span style="color:white"> Remember Me</span></label>  
+        adding span to color remember me white 
+                    </div>
+                    <button type="submit" class="btn btn-info"> Sign In</button>
+                </form> -->  
+
+            </div>
+            </div>
+        </nav>
+    <!-- adding a modal **1st introduce code for modal and then shift the code for the form from the navbar into the modal body. To set up add after navbar at top of pg 
+    **have outer div id loginModal* when modal is invoked it will fade in-->
+        <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+        <!-- **Modal content***
+        Modal content will have the modal-header, body, and footer.
+        -->
+            <div class="modal-content">
+                <div class="modal-header">
+        <!--addnig a button for the closing of the modal -->        
+                    <button type="button" class="close" data-dismiss="modal">&times;
+                    </button>
+                    <h4 class="modal-title">Login </h4>
+            </div>
+    <!--going to use navbar form that used earlier to enable the users to type in their login info. Then update the form class to form-inline. -->         
+            <div class="modal-body">
+    <!--add form ** now changing because form is no longer a navbar form so
+    need to change class to form-inline so that their elements are displayed in line
+    inside modal (removing navbar-form and navbar-right)-->
+            <form class="form-inline">
+    <!--adding form group -->
+                    <div class="form-group">
+                    <label class="sr-only" for="email"> Email Address</label>            
+    <!--compair with ex and missing input-sm * -->                
+                    <input type="email" class="form-control input-sm" id="email" 
+                    name="email" placeholder="Email">
+                    </div>
+    <!-- adding form group -->
+                    <div class="form-group">
+                    <label class="sr-only" for="password"> Password</label>                
+                    <input type="password" class="form-control input-sm" id="password" 
+                    name="password" placeholder="Password">
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="box1">
+        <!--taking out span for new form                 
+                        <span style="color:white"> -->
+                        Remember me</label>  
+                    </div>
+            <!--add btn-sm -->        
+                    <button type="submit" class="btn btn-info btn-sm"> Sign In</button>
+            <!--add button to for cancel -->
+                    <button type="button" class="btn btn-default btn-sm"
+                       data-dismiss="modal">Cancel</button>        
+                </form>    
+
+
+            </div>
+        </div>
+        </div>
+    </div>
+             
+
+    <header class="jumbotron">
+
+        <!-- Main component for a primary marketing message or call to action -->
+
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-xs-12 col-sm-8">
+                    <h1>Ristorante con Fusion</h1>
+                    <p style="padding:40px;"></p>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+    <!--adding logo, had to change col-sm from 4 to 2. will use remaining 2 for other purpose
+    in assignment  so leave as such. (replacing 2nd div column with code) *inside div using
+    img and the class img responsive* (will auto adapt to size of the containing parent
+    element which is the div class-->            
+                <div class="col-xs-12 col-sm-2">
+                    <p style="padding:20px;"></p>
+                    <img src="img/logo.png" class="img-responsive">
+                </div>
+        <!-- adding reserve a table with remaining 2 -->
+                <div class="col-xs-12 col-sm-2">
+                    <p style="padding: 40px;"></p>
+        <!-- Adding tooltip to reserve table button ** by updating the <a> tag 
+        by adding data-toggle, data-placement, & title attribute *** activate
+        with Javascript code at bottom of pg. ** fyi removed href-#reservation-->            
+                    <a type="button" class="btn btn-warning btn-block"
+                    data-toggle="tooltip" title="Or Call us at +852 12345678"
+                    data-placement="bottom" href="#reserveform">
+                    Reserve a Table</a>
+                </div>             
+            </div>
+        </div>
+    </header>
+    <!--top container div that contains content of pg -->
+    <div class="container">
+    <!--adding new div, new content row & inner div spaninng 12 col **For carousel*-->
+        <div class="row row-content">
+            <div class="col-xs-12">
+    <!-- setting up carousel, introduce a div with id, & data attribute data-ride -->
+            <div id="mycarousel" class="carousel slide" data-ride="carousel">
+
+             <!-- *indicators* using ol with class, then inside specified 3
+             list items, each of these set to id of carousel  -->
+                <ol class="carousel-indicators">
+                    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#mycarousel" data-slide-to="1"></li>
+                    <li data-target="#mycarousel" data-slide-to="2"></li>
+                </ol>
+
+    <!--introducing another div with class carousel-inner and with role listbox
+    carousel-inner contains all the info that will be displayed on the carousel -->
+
+                 <!-- Wrapper for slides -->
+    <!-- introduce each item within the carousel as a div with the class item -->
+                <div class="carousel-inner" role="listbox">
+    <!-- **one of divs will designated as active, so that is the one the carousel
+    begins with**  inside item class can include an image -->                         
+                    <div class="item active">
+                        <img class="img-responsive"
+                         src="img/uthappizza.png" alt="Uthappizza">
+        <!-- inside div carousel-caption can include html code** so used info from 1st row, and then cut & paste it inside the div below -->                
+                        <div class="carousel-caption">
+                        <h2>Uthappizza  <span class="label label-danger">Hot</span> <span class="badge">$4.99</span></h2>
+                        <p>A unique combination of Indian Uthappam (pancake) and
+                          Italian pizza, topped with Cerignola olives, ripe vine
+                          cherry tomatoes, Vidalia onion, Guntur chillies and
+                          Buffalo Paneer.</p>
+                        <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+                        </div>
+                    </div>
+    <!--doing same as above going to add 2 more items in the carousel. -->                 
+                    <div class="item">
+                        <img class="img-responsive" src="img/buffet.png" alt="Weekend
+                        Grand Buffet">
+                        <div class="carousel-caption">
+                        <h2>Weekend Grand Buffet <span class="label label-danger label-xs">New</span></h2>
+        <!--adding <p> -->
+                    <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+        <!--adding <p> and a class -->            
+                    <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>   
+                </div>
+                    </div>
+        <!-- adding 3rd item/3rd image -->            
+                    <div class="item">                                                      <img class="img-responsive"
+                         src="img/alberto.png" alt="Alberto Somayya">
+                        <div class="carousel-caption">
+        <!--adding h2 h4 and <p> -->
+                        <h2>Alberto Somayya</h2>
+                        <h4>Executive Chef</h4>
+                        <p>Award winning three-star Michelin chef with wide
+                        International experience having worked closely with
+                        whos-who in the culinary world, he specializes in
+                        creating mouthwatering Indo-Italian fusion experiences.
+                         </p>
+        <!-- adding <p> & a class -->
+                    <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>                 
+                        </div>
+                    </div>
+                </div>
+    <!--add rt and lf cntl to carousel -->
+            <!--  *Controls* using a tag acting as a button -->
+                <a class="left carousel-control" href="#mycarousel" role="button" 
+                data-slide="prev">
+            <!--inside using  glyphicon the lt chevron for and other is rt -->    
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true">
+                    </span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true">
+                    </span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>        
+
+            </div>
+       </div>
+    <!--fyi if doesn't wk set above code between 3/3 divs -->   
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-3 col-sm-push-9">
+                <p style="padding:20px;"></p>
+                <h3 align=center>Our Lipsmacking Culinary Creations</h3>
+            </div>
+            <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+    <!-- *go to first content row and replace the content in the second column containing descript
+    of Uthappizza with media code*           
+                <h2>Uthappizza</h2>
+                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                <p><a  href="#">More &raquo;</a></p>  -->
+    <!--media class applied to a div and inside of the div using media left and media middle class applied to an inner div. which includes img of div. Also the description itself, what was 
+    in the earlier div, now moved into a media body div. -->            
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a href="#">
+                        <img class="media-object img-thumbnail"
+                         src="img/uthappizza.png" alt="Uthappizza">
+                        </a>
+                    </div>
+                    <div class="media-body">
+        <!--using media class and h2 for the heading. Right next (after Uthappizza)
+        to label of dish going to add a label. **after Hot</span> adding another
+        span class "badge" to list price** -->            
+                        <h2 class="media-heading">Uthappizza  <span class="label label-danger">
+                        Hot</span> <span class="badge">$4.99</span></h2>
+                        <p>A unique combination of Indian Uthappam (pancake) and
+                          Italian pizza, topped with Cerignola olives, ripe vine
+                          cherry tomatoes, Vidalia onion, Guntur chillies and
+                          Buffalo Paneer.</p>
+        <!--also updated the a class that contains the mode line and turn it into button. -->                  
+                        <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+                    </div>
+                </div>
+                </div>
+        <!-- put code in wrong place adding bk divs had 5 took 2.....spacing issues..replace div
+                </div> -->
+    </div>          
+    
+        <!-- row 2 -->
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-3">
+                <p style="padding:20px;"></p>
+                <h3 align=center>This Month's Promotions</h3>
+            </div>
+            <div class = "col-xs-12 col-sm-9">
+    <!--adding new label and adding media for img on rt side-->
+                <div class="media">
+                    <div class="media-body">
+                        <h2 class="media-heading">Weekend Grand Buffet <span class="label label-danger">
+                        New</span></h2>
+                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+    <!-- *updating the more link below into a button.            
+                <p><a href="#">More &raquo;</a></p> -->
+                <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>        
+            </div>
+            <a class="media-right" href="#">
+                <img class="media-object img-thumbnail" src="img/buffet.png" alt="Buffet"></a>
+            </div>
+            </div>
+        </div>
+    <!-- row #3 -->
+        <div class="row row-content">
+            <div class = "col-xs-12 col-sm-3 col-sm-push-9">
+                <p style="padding:20px;"></p>
+                <h3 align=center>Meet our Culinary Specialists</h3>
+            </div>
+            <div class= "col-xs-12 col-sm-9 col-sm-pull-3">
+    <!--replacing contents of second column containing description about Alberto **        
+                <h2>Alberto Somayya</h2>
+                <h4>Executive Chef</h4>
+                <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                <p><a href="#">More &raquo;</a></p>  -->
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a href="#">
+                        <img class="media-object img-thumbnail"
+                         src="img/alberto.png" alt="Alberto Somayya">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h2 class="media-heading">Alberto Somayya</h2>
+                        <h4>Executive Chef</h4>
+                        <p>Award winning three-star Michelin chef with wide
+                         International experience having worked closely with
+                         whos-who in the culinary world, he specializes in
+                          creating mouthwatering Indo-Italian fusion experiences.
+                         </p>
+                        <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+                    </div>
+                </div>
+            </div>
+        <!--adding div here for spacing issue -->
+        </div>    
+        <!-- took out 2 divs ***adding row 4 for reserve a table** -->
+                    <!-- *adding row 4 content here, but not sure on div, did have 5, leaving 3 putting 2 at end -->
+    <!--content to add reserve a table -->
+                    <div class="row row-content">
+                        <div class="col-xs-12 col-sm-3">
+                            <p style="padding: 20px;"></p>
+                            <h3 align= center id="reserveform">Reserve a Table</h3>
+                        </div>
+                    <div class="col-xs-12 col-sm-9">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="numberofguest" class="col-sm-2 control-label">Number of
+                                Guest</label>
+                                <div class="col-sm-10">
+                            <label class="radio-inline"><input type="radio" name="optradio">1</label>
+                            <label class="radio-inline"><input type="radio" name="optradio">2</label>
+                            <label class="radio-inline"><input type="radio" name="optradio">3</label>
+                            <label class="radio-inline"><input type="radio" name="optradio">4</label>
+                            <label class="radio-inline"><input type="radio" name="optradio">5</label>
+                            <label class="radio-inline"><input type="radio" name="optradio">6</label>  
+                    </div>        
+                </div>
+        <!-- **"has-feedback" allows glyphicon to be on the rt side, combine with form-control-feedback in the i class -->
+                    <div class="form-group has-feedback">
+                        <label for= "dateandtime" class="col-sm-2 control-label"> Date and Time</label>
+                        <div class="col-sm-4">
+            <!--icon not working trying div -->
+                        <div class="inner-addon right-addon">
+                            <i class="glyphicon glyphicon-calendar form-control-feedback"></i>
+                            <input type="text" class="form-control" id="date" name="date" placeholder="Date">
+                        </div>
+                    </div>
+                    
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-4">
+                            <div class="inner-addon right-addon">
+                                <i class="glyphicon glyphicon-time form-control-feedback"></i>
+                                <input type="text" class="form-control" id="time" name="date" placeholder="Time">
+                            </div>    
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="spacing" class="col-sm-2 control-label"></label>
+                            <div class="col-sm-4">
+                                <button type="submit" class="btn btn-primary">Reserve</button>    
+                            </div>    
+                        </div>
+                        <div class="alert alert-warning alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <strong>Warning:</strong> Please <a href="tel:+85212345678" class="alert-link"> call</a> us to reserve for more than six guest.
+                        </div>
+                    </form>        
+                </div>
+            </div>
+        </div>    
+
+    <footer class="row-footer">
+        <div class="container">
+            <div class="row">             
+                <div class= "col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-1">
+                    <h5>Links</h5>
+                    <ul class = "list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+                      121, Clear Water Bay Road<br>
+                      Clear Water Bay, Kowloon<br>
+                      HONG KONG<br>
+    <!--going to replace tele, fax, and email links using fontasm icons.                      Tel.: +852 1234 5678<br>
+                      Fax: +852 8765 4321<br>
+                      Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
+                      -->
+                    <i class="fa fa-phone"></i>: +852 1234 5678<br>
+                    <i class="fa fa-fax"></i>: +852 8765 4321<br>
+                    <i class="fa fa-envelope"></i>: 
+                    <a href="mailto:confusion@food.net">confusion@food.net</a>
+                </address>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+    <!--Going to replace below code (text links with buttons) using Bootstrap
+    socials and font awesome icons for the diff social media sites. 
+                    <div style="padding: 40px 10px;">
+                        <a href="http://google.com/+">Google+</a>
+                        <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
+                        <a href="http://www.linkedin.com/in/">LinkedIn</a>
+                        <a href="http://twitter.com/">Twitter</a>
+                        <a href="http://youtube.com/">YouTube</a>
+                        <a href="mailto:">Mail</a> -->
+    <!--How does Bootstrap social paste buttons work? 1) Turned div into a navbar-nav 
+    class. FYI can use the navbar stylings in other locations of webpg if needed. Any
+    way using that to define the bar containing the icons for all my social media 
+    links. -->
+                <div class="nav navbar-nav" style="padding: 40px 10px;">
+    <!--Explain using google+. Defining a tag a, with class button (a class=). So turnig that into button class. Then saying button social icon and button Google+. This description comes from bootstraps social way of specifying buttons. Then inside there using the Font Awesome icon for Google+ enclosed in there. Now google+ button styled sim to other webpgs -->                   
+                        <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <p style="padding:10px;"></p>
+                    <p align=center>© Copyright 2015 Ristorante Con Fusion</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Adding for tooltip to be activated ** note whenever have data-toggle="tooltip"
+    included as an attribute for the element will activate the tooltip-->
+    <script>
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+         });
+    </script>
+
+</body>
+
+</html>

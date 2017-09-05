@@ -1,0 +1,108 @@
+.row-header{
+    margin:0px auto;
+    padding:0px auto;
+}
+
+.row-content {
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height:400px;
+}
+
+.row-footer{
+    background-color: #AfAfAf;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.jumbotron {
+    padding:70px 30px 70px 30px;
+    margin:0px auto;
+    background: #7986CB ;
+    color:floralwhite;
+}
+
+address{
+    font-size:80%;
+    margin:0px;
+    color:#0f0f0f;
+}
+
+/*modify css for nav bar style - nav bar displayed dk blue instead of black. Also have nav
+bar indicate current pg by highlighting item with a dk bkground in navbar. In addt used 
+fixed nav bar so should give the body of the pg an upper margin of 50px so the top
+50px of pg does not get hidden under the nav bar. */
+
+body{
+    padding:50px 0px 0px 0px;
+    z-index:0;
+}
+
+.navbar-inverse {
+     background: #303F9F;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background: #1A237E;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+ .navbar-inverse .navbar-nav > .open > a:hover,
+ .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background: #1A237E;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu> li> a,
+.navbar-inverse .navbar-nav .open .dropdown-menu {
+    background-color: #303F9F;
+    color:#eeeeee;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu> li> a:hover {
+    color:#000000;
+}
+
+
+/* tab-content modification adds a 1px border to the tab content
+which joins with upper border introduced by tab nav element to 
+give clean tab like apperence */
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* to introduce affix class for scrollspy add following code */
+.affix {
+    top:100px;
+}
+
+/* adding for carousel */
+.carousel {
+    background:#1A237E;
+}
+/* set up ht so carousel ht will be fixed */
+.carousel .item {
+  height: 300px;
+}
+/* item img specifying position absolute, set to 0 0 so img that is included 
+there will be stuck on the left edge of this carousel slide with top & left 0*/
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+/*adding to position the buttons at the bottom-right corner of the carousel****
+for wk4 ex1 **/
+#carouselButtons {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
+}

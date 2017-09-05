@@ -1,0 +1,116 @@
+/*	added a few color and a height variable. We will make use of        	these variables while defining the classes.	*/
+/* will make use of above(zero-margin) to define several
+	row classes next */
+/* Next using Mixin class we defined earlier, adding following
+	row classes to file */
+.row-header {
+  margin: 0px auto;
+  padding: 0px 0px;
+}
+.row-content {
+  margin: 0px auto;
+  padding: 50px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px;
+}
+.row-footer {
+  margin: 0px auto;
+  padding: 20px 0px;
+  background-color: #AfAfAf;
+}
+.jumbotron {
+  margin: 0px auto;
+  padding: 70px 30px;
+  background: #7986CB;
+  color: floralwhite;
+}
+/* Note use of mixin with various parameters in def the class above****
+	Next add a carousel class to illustrate the use of nesting of classes in less as follows	*/
+/* note the use of the variables that we have defined already------
+--also use of nesting with the item class inside the carousel class
+and img class inside. so when combind we have 3 diff classes */
+.carousel {
+  background: #1a237e;
+}
+.carousel .item {
+  height: 300px;
+}
+.carousel .item img {
+  left: 0;
+  min-height: 300px;
+  position: absolute;
+  top: 0;
+}
+/*	Add another group of nesting classes with the navbar-inverse class as follows */
+.navbar-inverse {
+  background: #303f9f;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .active > a {
+  background: #1a237e;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .active > a:hover {
+  background: #1a237e;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background: #1a237e;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .open > a {
+  background: #1a237e;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .open > a:hover {
+  background: #1a237e;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background: #1a237e;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+  background-color: #303f9f;
+  color: #eeeeee;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
+  color: #000000;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu {
+  background-color: #303f9f;
+  color: #eeeeee;
+}
+/* adding remaining css classes which do not fall into any of the 
+above categories. These still use the Less variables (like color)
+, but do not use nesting or mixins. and could not use the Less features into a lg extent---most standard css classes and
+have nothing in common with the remaining classes  */
+address {
+  color: #0f0f0f;
+  font-size: 80%;
+  margin: 0px;
+}
+body {
+  align: center;
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+}
+.tab-content {
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  padding: 10px;
+}
+.affix {
+  top: 100px;
+}
+#carouselButtons {
+  bottom: 0px;
+  position: absolute;
+  right: 0px;
+}
+/* after this code going to install and use the lessc Compiler
+Once we installed node module to support the compilation of
+Less file. To do this type th following at the command prompt
+npm install -g less
+This will install the less NPM module globally so it can be used by any project. This will make aval lessc compiler so that can compile Less files */
